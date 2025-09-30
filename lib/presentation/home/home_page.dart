@@ -23,7 +23,6 @@ class _HomePageState extends State<HomePage> {
             child: Image.asset(
               "assets/images/backgrounds.png",
               fit: BoxFit.cover,
-            
             ),
           ),
 
@@ -513,14 +512,13 @@ class _HomePageState extends State<HomePage> {
                   const SizedBox(height: 12),
 
                   Padding(
-
                     padding: const EdgeInsets.all(20.0),
                     child: Container(
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(16),
+                       
                       ),
-                     
                       child: Column(
                         children: [
                           Stack(
@@ -534,7 +532,7 @@ class _HomePageState extends State<HomePage> {
                                 child: Image.asset(
                                   "assets/images/spark.png",
                                   fit: BoxFit.cover,
-                                  height: 120,
+                                  height: 180,
                                   width: double.infinity,
                                 ),
                               ),
@@ -542,17 +540,29 @@ class _HomePageState extends State<HomePage> {
                                 mainAxisSize: MainAxisSize.min,
                                 children: [
                                   Text(
+                                    "UNINET",
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w500,
+                                      color: Colors.black87,
+                                      letterSpacing: 2,
+                                    ),
+                                  ),
+                                  const SizedBox(height: 8),
+                                  Text(
                                     "30",
                                     style: TextStyle(
-                                      fontSize: 42,
+                                      fontSize: 72,
                                       fontWeight: FontWeight.bold,
                                       color: Colors.black87,
+                                      height: 1,
                                     ),
                                   ),
                                   Text(
                                     "Mbps",
                                     style: TextStyle(
-                                      fontSize: 18,
+                                      fontSize: 24,
+                                      fontWeight: FontWeight.w500,
                                       color: Colors.grey[600],
                                     ),
                                   ),
@@ -560,79 +570,98 @@ class _HomePageState extends State<HomePage> {
                               ),
                             ],
                           ),
-                    
+
                           const Divider(height: 1, color: Colors.grey),
-                    
+
                           Padding(
-                            padding: const EdgeInsets.all(16.0),
-                            child: Column(
+                            padding: const EdgeInsets.all(20.0),
+                            child: Row(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Row(
-                                  children: [
-                                    const Text(
-                                      "Periode Layanan",
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.w600,
+                                Expanded(
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        "Periode Layanan",
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w600,
+                                          fontSize: 14,
+                                          color: Colors.black87,
+                                        ),
                                       ),
-                                    ),
-                                    const SizedBox(width: 8),
-                                    Text("17 Mei 2024 - 17 Juni 2024"),
-                                    const SizedBox(width: 8),
+                                      const SizedBox(height: 6),
+                                      Text(
+                                        "17 Mei 2024 - 17 Juni 2024",
+                                        style: TextStyle(
+                                          fontSize: 14,
+                                          color: Colors.black87,
+                                        ),
+                                      ),
+                                      const SizedBox(height: 12),
+                                      Container(
+                                        padding: const EdgeInsets.symmetric(
+                                          horizontal: 16,
+                                          vertical: 8,
+                                        ),
+                                        decoration: BoxDecoration(
+                                          color: Colors.blue[700],
+                                          borderRadius: BorderRadius.circular(
+                                            20,
+                                          ),
+                                        ),
+                                        child: const Text(
+                                          "Besic Membership",
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 13,
+                                            fontWeight: FontWeight.w500,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+
+                                const SizedBox(width: 20),
+
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.end,
+                                  children: [
                                     Container(
                                       padding: const EdgeInsets.symmetric(
-                                        horizontal: 8,
-                                        vertical: 4,
+                                        horizontal: 14,
+                                        vertical: 7,
                                       ),
                                       decoration: BoxDecoration(
                                         color: Colors.green,
-                                        borderRadius: BorderRadius.circular(12),
+                                        borderRadius: BorderRadius.circular(16),
                                       ),
                                       child: const Text(
                                         "Aktif",
                                         style: TextStyle(
                                           color: Colors.white,
-                                          fontSize: 12,
+                                          fontSize: 13,
+                                          fontWeight: FontWeight.w500,
                                         ),
                                       ),
                                     ),
-                                  ],
-                                ),
-                                const SizedBox(height: 8),
-                                const Text(
-                                  "Basic Membership",
-                                  style: TextStyle(
-                                    backgroundColor: Colors.blue,
-                                    color: Colors.white,
-                                  ),
-                                ),
-                                const SizedBox(height: 16),
-                                Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: const [
-                                    Text("Tanggal Tagihan :"),
-                                    Text("17 Juni 2024"),
-                                  ],
-                                ),
-                                Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: const [
-                                    Text("Jatuh Tempo :"),
-                                    Text("19 Juni 2024"),
-                                  ],
-                                ),
-                                Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: const [
-                                    Text("Jumlah Total :"),
-                                    Text(
-                                      "Rp. 250.000",
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                      ),
+                                    const SizedBox(height: 20),
+                                    _buildInfoRow(
+                                      "Tanggal Tagihan :",
+                                      "17 Juni 2024",
+                                    ),
+                                    const SizedBox(height: 8),
+                                    _buildInfoRow(
+                                      "Jatuh tempo",
+                                      ": 19 Juni 2024",
+                                    ),
+                                    const SizedBox(height: 8),
+                                    _buildInfoRow(
+                                      "Jumlah Total",
+                                      ": Rp. 250.000",
+                                      isBold: true,
                                     ),
                                   ],
                                 ),
@@ -643,6 +672,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                   ),
+
                   const SizedBox(height: 24),
 
                   Padding(
@@ -811,6 +841,24 @@ class _HomePageState extends State<HomePage> {
           ),
         ],
       ),
+    );
+  }
+
+  Widget _buildInfoRow(String label, String value, {bool isBold = false}) {
+    return Row(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Text(label, style: TextStyle(fontSize: 14, color: Colors.black87)),
+        const SizedBox(width: 4),
+        Text(
+          value,
+          style: TextStyle(
+            fontSize: 14,
+            color: Colors.black87,
+            fontWeight: isBold ? FontWeight.bold : FontWeight.normal,
+          ),
+        ), 
+      ],
     );
   }
 
