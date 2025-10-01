@@ -3,6 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:mobile_unapps/constant/bottom_bar/bottom_nav_clipper.dart';
 import 'package:mobile_unapps/constant/theme/color_constant.dart';
 import 'package:mobile_unapps/presentation/home/home_page.dart';
+import 'package:mobile_unapps/presentation/profile/profile_page.dart';
 
 
 
@@ -22,7 +23,7 @@ class _BottomMainState extends State<BottomMain> {
       const HomePage(),
       Text("Activity Page"),
       Text("Room Page"),
-      Text("Profile Page"),
+      const ProfilePage(),
     ];
   }
 
