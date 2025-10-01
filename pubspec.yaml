@@ -80,6 +80,10 @@ flutter:
      - assets/icons/
      - .env.development
      - .env.production
+     - assets/lottie/loading_animation.json
+     - assets/lottie/on_progress.json
+     - assets/lottie/new-loading.json
+     - assets/lottie/Success.json
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
