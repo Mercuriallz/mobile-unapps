@@ -531,7 +531,7 @@ class _HomePageState extends State<HomePage> {
                                 ),
                                 child: Image.asset(
                                   "assets/images/spark.png",
-                                  fit: BoxFit.cover,
+                                  fit: BoxFit.fill,
                                   height: 180,
                                   width: double.infinity,
                                 ),

@@ -5,6 +5,7 @@ import "package:mobile_unapps/constant/theme/color_constant.dart";
 import "package:mobile_unapps/cubit/auth/login_cubit.dart";
 import "package:mobile_unapps/cubit/auth/login_state.dart";
 import "package:mobile_unapps/helper/storage.dart";
+import "package:mobile_unapps/model/login_request_model.dart";
 import "package:mobile_unapps/widget/custom_text_field.dart";
 import "package:mobile_unapps/widget/loading.dart";
 
@@ -184,25 +185,11 @@ class _LoginPageState extends State<LoginPage> {
                               height: isSmallScreen ? 52 : 56,
                               child: ElevatedButton(
                                 onPressed: () {
-                                  // if (emailController.text.isEmpty ||
-                                  //     passwordController.text.isEmpty) {
-                                  //   ScaffoldMessenger.of(context).showSnackBar(
-                                  //     const SnackBar(
-                                  //       content: Text("Mohon isi semua field"),
-                                  //       backgroundColor: Color(0xFFF44336),
-                                  //     ),
-                                  //   );
-                                  // } else {
-                                  //   ScaffoldMessenger.of(context).showSnackBar(
-                                  //     const SnackBar(
-                                  //       content: Text("Login berhasil!"),
-                                  //       backgroundColor: Color(0xFF4CAF50),
-                                  //     ),
-                                  //   );
-                                  //                               context.push("/main");
-
-                                  // }
-                                  context.push("/home");
+                                  final data = LoginRequestModel(
+                                    customerEmail: emailController.text,
+                                    customerPassword: passwordController.text,
+                                  );
+                                  context.read<LoginCubit>().login(data);
                                 },
                                 style: ElevatedButton.styleFrom(
                                   backgroundColor:
