@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:mobile_unapps/presentation/order/membership/membership_card.dart';
 import 'package:mobile_unapps/widget/background_image.dart';
 
-
 class UninetMembershipPage extends StatelessWidget {
   const UninetMembershipPage({super.key});
 
@@ -10,7 +9,7 @@ class UninetMembershipPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     final isSmallScreen = size.width < 360;
-    
+
     return Scaffold(
       body: BackgroundImage(
         imagePath: "assets/images/backgrounds.png",
@@ -27,7 +26,10 @@ class UninetMembershipPage extends StatelessWidget {
                     child: Row(
                       children: [
                         IconButton(
-                          icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
+                          icon: const Icon(
+                            Icons.arrow_back_ios,
+                            color: Colors.white,
+                          ),
                           onPressed: () {},
                           padding: EdgeInsets.zero,
                           constraints: const BoxConstraints(),
@@ -46,7 +48,9 @@ class UninetMembershipPage extends StatelessWidget {
                   ),
                   Expanded(
                     child: SingleChildScrollView(
-                      padding: EdgeInsets.symmetric(horizontal: size.width * 0.045),
+                      padding: EdgeInsets.symmetric(
+                        horizontal: size.width * 0.045,
+                      ),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -66,63 +70,57 @@ class UninetMembershipPage extends StatelessWidget {
                             ),
                           ),
                           MembershipCard(
-                            planName: "Besic",
+                            planType: "Besic",
                             speed: "30",
-                            unit: "Mbps",
-                            price: "1 Bulan",
-                            color: const Color(0xFF2E5BFF),
-                            size: size,
-                            isSmallScreen: isSmallScreen,
+                            title: "Mbps",
+                            duration: "1 Bulan",
+                            isMembership: false,
+                            subtitle: "MBPS",
                           ),
                           SizedBox(height: size.height * 0.015),
                           MembershipCard(
-                            planName: "Bronze",
+                            planType: "Bronze",
                             speed: "50",
-                            unit: "Mbps",
-                            price: "1 Bulan",
-                            color: const Color(0xFF2E5BFF),
-                            size: size,
-                            isSmallScreen: isSmallScreen,
+                            title: "Mbps",
+                            duration: "1 Bulan",
+                            isMembership: false,
+                            subtitle: "MBPS",
                           ),
                           SizedBox(height: size.height * 0.015),
                           MembershipCard(
-                            planName: "Silver",
+                            planType: "Silver",
                             speed: "100",
-                            unit: "Mbps",
-                            price: "1 Bulan",
-                            color: const Color(0xFF2E5BFF),
-                            size: size,
-                            isSmallScreen: isSmallScreen,
+                            title: "Mbps",
+                            duration: "1 Bulan",
+                            isMembership: false,
+                            subtitle: "MBPS",
                           ),
                           SizedBox(height: size.height * 0.015),
                           MembershipCard(
-                            planName: "Gold",
+                            planType: "Gold",
                             speed: "200",
-                            unit: "Mbps",
-                            price: "1 Bulan",
-                            color: const Color(0xFF2E5BFF),
-                            size: size,
-                            isSmallScreen: isSmallScreen,
+                            title: "Mbps",
+                            duration: "1 Bulan",
+                            isMembership: false,
+                            subtitle: "MBPS",
                           ),
                           SizedBox(height: size.height * 0.015),
                           MembershipCard(
-                            planName: "Titanium",
+                            planType: "Titanium",
                             speed: "500",
-                            unit: "Mbps",
-                            price: "1 Bulan",
-                            color: const Color(0xFF2E5BFF),
-                            size: size,
-                            isSmallScreen: isSmallScreen,
+                            title: "Mbps",
+                            duration: "1 Bulan",
+                            isMembership: false,
+                            subtitle: "MBPS",
                           ),
                           SizedBox(height: size.height * 0.015),
                           MembershipCard(
-                            planName: "Platinum",
+                            planType: "Platinum",
                             speed: "1",
-                            unit: "Gbps",
-                            price: "1 Bulan",
-                            color: const Color(0xFF2E5BFF),
-                            size: size,
-                            isSmallScreen: isSmallScreen,
+                            title: "Gbps",
+                            duration: "1 Bulan",
+                            isMembership: false,
+                            subtitle: "MBPS",
                           ),
                           SizedBox(height: size.height * 0.025),
                           Container(
@@ -149,7 +147,8 @@ class UninetMembershipPage extends StatelessWidget {
                                 SizedBox(width: size.width * 0.03),
                                 Expanded(
                                   child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     children: [
                                       Text(
                                         "Uninet Membership",

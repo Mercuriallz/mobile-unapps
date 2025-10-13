@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:mobile_unapps/constant/theme/text_constant.dart';
 import 'package:mobile_unapps/presentation/order/order_item.dart';
+// import 'package:mobile_unapps/presentation/order/test.dart';
 import 'package:mobile_unapps/widget/background_image.dart';
 import 'package:mobile_unapps/widget/custom_back_header.dart';
 
@@ -30,20 +32,15 @@ class OrderInitialPage extends StatelessWidget {
                     child: Row(
                       children: [
                         CustomBackHeader(
+                          textStyle: TextConfig.largeTextWhite,
+                          color: Colors.white,
                           title: "Order",
                           onBack: () {
                             Navigator.pop(context);
                           },
                         ),
                         const SizedBox(width: 12),
-                        const Text(
-                          "Order",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 20,
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
+                        
                       ],
                     ),
                   ),
@@ -104,6 +101,7 @@ class OrderInitialPage extends StatelessWidget {
                                   icon: Icons.cloud,
                                   size: itemWidth,
                                   onTap: () {
+                                    // Navigator.push(context, MaterialPageRoute(builder: (context) => const LayananPage()));
                                   },
                                 )
                               ],

@@ -54,6 +54,13 @@ class TextConfig {
     fontWeight: FontWeight.w600,
   );
 
+  static TextStyle megaText = TextStyle(
+    fontFamily: GoogleFonts.poppins().fontFamily,
+    color: ColorConstant.standarText,
+    fontSize: 36,
+    fontWeight: FontWeight.w600,
+  );
+
   static TextStyle largeText = TextStyle(
     fontFamily: GoogleFonts.poppins().fontFamily,
     color: ColorConstant.standarText,
@@ -65,6 +72,13 @@ class TextConfig {
     fontFamily: GoogleFonts.poppins().fontFamily,
     color: ColorConstant.secondary100,
     fontSize: 16,
+    fontWeight: FontWeight.w600,
+  );
+
+  static TextStyle largeTextWhite = TextStyle(
+    fontFamily: GoogleFonts.poppins().fontFamily,
+    color: ColorConstant.secondary100,
+    fontSize: 20,
     fontWeight: FontWeight.w600,
   );
 }
