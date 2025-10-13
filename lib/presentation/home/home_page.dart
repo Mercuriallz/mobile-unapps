@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import "package:go_router/go_router.dart";
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -197,11 +198,7 @@ class _HomePageState extends State<HomePage> {
                           children: [
                             GestureDetector(
                               onTap: () {
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                  const SnackBar(
-                                    content: Text("Pemesanan clicked"),
-                                  ),
-                                );
+                                context.push("/order")  ;
                               },
                               child: Column(
                                 children: [

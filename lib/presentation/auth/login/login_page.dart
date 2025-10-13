@@ -5,7 +5,7 @@ import "package:mobile_unapps/constant/theme/color_constant.dart";
 import "package:mobile_unapps/cubit/auth/login_cubit.dart";
 import "package:mobile_unapps/cubit/auth/login_state.dart";
 import "package:mobile_unapps/helper/storage.dart";
-import "package:mobile_unapps/model/login_request_model.dart";
+import "package:mobile_unapps/model/login/login_request_model.dart";
 import "package:mobile_unapps/widget/custom_text_field.dart";
 import "package:mobile_unapps/widget/loading.dart";
 

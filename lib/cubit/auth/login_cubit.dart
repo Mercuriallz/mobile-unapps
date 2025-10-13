@@ -2,8 +2,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mobile_unapps/cubit/auth/login_state.dart';
 import 'package:mobile_unapps/helper/dio_service.dart';
 import 'package:mobile_unapps/helper/storage.dart';
-import 'package:mobile_unapps/model/login_model.dart';
-import 'package:mobile_unapps/model/login_request_model.dart';
+import 'package:mobile_unapps/model/login/login_model.dart';
+import 'package:mobile_unapps/model/login/login_request_model.dart';
 
 class LoginCubit extends Cubit<LoginState> {
   LoginCubit() : super(LoginInitial());
