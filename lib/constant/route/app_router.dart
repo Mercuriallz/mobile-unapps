@@ -6,8 +6,8 @@ import 'package:mobile_unapps/presentation/auth/login/login_page.dart';
 import 'package:mobile_unapps/presentation/auth/register/register_page.dart';
 import 'package:mobile_unapps/presentation/auth/register/set_password_page.dart';
 import 'package:mobile_unapps/presentation/home/home_page.dart';
-import 'package:mobile_unapps/presentation/order/membership/membership_page.dart';
-import 'package:mobile_unapps/presentation/order/order_initial_page.dart';
+import 'package:mobile_unapps/presentation/home/order/membership/membership_page.dart';
+import 'package:mobile_unapps/presentation/home/order/order_initial_page.dart';
 
 
 final router = GoRouter(initialLocation: "/", routes: [

@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import "package:go_router/go_router.dart";
+import "package:mobile_unapps/presentation/home/ticket/ticket_initial_page.dart";
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -235,11 +236,7 @@ class _HomePageState extends State<HomePage> {
                             ),
                             GestureDetector(
                               onTap: () {
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                  const SnackBar(
-                                    content: Text("Tiket clicked"),
-                                  ),
-                                );
+                             Navigator.push(context, MaterialPageRoute(builder: (context) => const TicketPage()));
                               },
                               child: Column(
                                 children: [

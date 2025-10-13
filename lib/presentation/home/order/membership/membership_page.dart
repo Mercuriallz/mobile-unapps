@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mobile_unapps/presentation/order/membership/membership_card.dart';
+import 'package:mobile_unapps/presentation/home/order/membership/membership_card.dart';
 import 'package:mobile_unapps/widget/background_image.dart';
 
 class UninetMembershipPage extends StatelessWidget {
